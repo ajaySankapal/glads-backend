@@ -5,6 +5,7 @@ const connectDB = require('./config/db')
 const shopRouter = require('./routes/shopRouter')
 const adminRouter = require('./routes/adminRouter')
 const productRouter = require('./routes/productRouter')
+const staffRouter = require('./routes/staffRouter')
 const Location = require('./models/locationSchema')
 
 dotenv.config()
@@ -25,6 +26,9 @@ app.use(adminRouter)
 
 //product routers
 app.use(productRouter)
+
+//staff routes
+app.use(staffRouter)
 
 const PORT = process.env.PORT || 5000
 
